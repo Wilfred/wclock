@@ -46,6 +46,8 @@ android {
         // Keep the build honest: a lint warning is a bug we have not fixed yet.
         warningsAsErrors = true
         checkDependencies = true
+        // Put the whole report in the build log, so CI failures are self-explanatory.
+        textReport = true
     }
 
     packaging {
