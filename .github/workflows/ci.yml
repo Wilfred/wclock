@@ -40,8 +40,17 @@ jobs:
           # cannot poison it.
           cache-read-only: ${{ github.ref != 'refs/heads/main' }}
 
-      - name: Assemble, lint and run unit tests
-        run: ./gradlew build
+      - name: Assemble debug
+        run: ./gradlew :app:assembleDebug
+
+      - name: Unit tests
+        run: ./gradlew :app:testDebugUnitTest
+
+      - name: Lint
+        run: ./gradlew :app:lintDebug
+
+      - name: Assemble release
+        run: ./gradlew :app:assembleRelease
 
       - name: Upload debug APK
         uses: actions/upload-artifact@v4
