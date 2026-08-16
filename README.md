@@ -42,7 +42,9 @@ installed alongside a release build.
 
 - Dependency versions live only in `gradle/libs.versions.toml`. Compose artifact
   versions come from the Compose BOM, so they are not pinned individually.
-- Lint runs with `warningsAsErrors`, so a warning fails the build.
+- Lint runs with `warningsAsErrors`, so a warning fails the build. The
+  "a newer version is available" checks are disabled — they would turn any
+  upstream release into a red build; Dependabot proposes upgrades instead.
 - Anything that does not need Android APIs goes in plain Kotlin and gets a JVM
   unit test; only genuinely UI-level behaviour is covered by instrumented tests.
 

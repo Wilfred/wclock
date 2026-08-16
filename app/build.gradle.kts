@@ -48,6 +48,9 @@ android {
         checkDependencies = true
         // Put the whole report in the build log, so CI failures are self-explanatory.
         textReport = true
+        // Version-drift checks turn any upstream release into a build failure, which
+        // makes CI non-reproducible. Dependabot proposes those upgrades instead.
+        disable += setOf("AndroidGradlePluginVersion", "GradleDependency", "NewerVersionAvailable")
     }
 
     packaging {
