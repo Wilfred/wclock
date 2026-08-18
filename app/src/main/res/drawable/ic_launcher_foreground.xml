@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Clock face drawn inside the 72x72dp adaptive-icon safe zone of a 108x108dp canvas. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Dial -->
+    <path
+        android:pathData="M28,54a26,26 0 1,0 52,0a26,26 0 1,0 -52,0"
+        android:strokeWidth="5"
+        android:strokeColor="#FFFFFFFF" />
+
+    <!-- Hour hand -->
+    <path
+        android:pathData="M54,54L54,38"
+        android:strokeWidth="5"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeLineCap="round" />
+
+    <!-- Minute hand -->
+    <path
+        android:pathData="M54,54L67,61"
+        android:strokeWidth="5"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeLineCap="round" />
+
+</vector>
