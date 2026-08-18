@@ -53,7 +53,7 @@ jobs:
         run: ./gradlew :app:assembleRelease
 
       - name: Upload debug APK
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: app-debug
           path: app/build/outputs/apk/debug/*.apk
@@ -61,7 +61,7 @@ jobs:
 
       - name: Upload build reports
         if: always()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: build-reports
           path: |
@@ -109,7 +109,7 @@ jobs:
 
       - name: Upload instrumented test reports
         if: always()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: instrumented-test-reports-api-${{ matrix.api-level }}
           path: app/build/reports/androidTests/
